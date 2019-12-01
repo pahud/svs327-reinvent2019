@@ -1,0 +1,19 @@
+{
+  "Records": [{
+    "messageId": "650baa5b-9be8-44ad-a465-4ed25906ac33",
+    "receiptHandle": "AQEBExRKf/uaDHvhuXP0Zgn2AbSTFLEmH3wUEIKAlyVxhMaWH3MWMQtcntIatr2dSWbm3NdJ6PQEF3zycMKKZhNOBr84+lDw1XBOBISr013EG6xNF71rtYBpbt79WLWhXJYK5QLBp+sF6jkAQSWR3N38K0UpT9mdGTGu7z893li2/fCMklimenYUiGmg9DOWMqEhuPhj1p28eXcs+thSo28m+lCHypUxIrG56+LW6B3JzbBDThJ3S1j3gSZ0ggXEWZspS6BMV07nXw+ocaYPyY8QtHMD5aEaPFoFcS+ZsGoLqv3jwl/uTGBI70qh/EwUzhJqVPayA97ZHUf8bFWr1Qsc+UlMdqsoyTVJGvlmVufhD8ZHaK5iW68W8uGntEJgQ8wxEFj/gCf62h6D5YCtdV0rIVtNOQOBVB+shGMa2wVXPko=",
+    "body": "dd",
+    "attributes": {
+      "ApproximateReceiveCount": "1",
+      "AWSTraceHeader": "Root=1-5ddc0090-ec1a3371208b9ba5e2d3706f",
+      "SentTimestamp": "1574699153043",
+      "SenderId": "AIDAIYLAVTDLUXBIEIX46",
+      "ApproximateFirstReceiveTimestamp": "1574699153052"
+    },
+    "messageAttributes": {},
+    "md5OfBody": "cafe64c8369dec5d497686678ae41ab5",
+    "eventSource": "aws:sqs",
+    "eventSourceARN": "arn:aws:sqs:us-west-2:903779448426:CdkStack-Queue4A7E3555-HM32JZGYX57",
+    "awsRegion": "us-west-2"
+  }]
+}

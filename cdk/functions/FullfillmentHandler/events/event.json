@@ -1,0 +1,63 @@
+{
+  "Records": [{
+    "eventID": "1182bcb75a0eaea1ffb948b7ebb9dbb4",
+    "eventName": "INSERT",
+    "eventVersion": "1.1",
+    "eventSource": "aws:dynamodb",
+    "awsRegion": "us-west-2",
+    "dynamodb": {
+      "ApproximateCreationDateTime": 1575087444.0,
+      "Keys": {
+        "message_id": {
+          "S": "2b36c6b3-49bd-4ef2-93af-6da05c786a0d"
+        }
+      },
+      "NewImage": {
+        "message_id": {
+          "S": "35895f98-82fd-4397-ae69-e8e2afeab171"
+        },
+        "body": {
+          "M": {
+            "SignatureVersion": {
+              "S": "1"
+            },
+            "Type": {
+              "S": "Notification"
+            },
+            "TopicArn": {
+              "S": "arn:aws:sns:us-west-2:903779448426:SNS2IM"
+            },
+            "Message": {
+              "S": "{}"
+            },
+            "UnsubscribeURL": {
+              "S": "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:903779448426:SNS2IM:93d80384-138d-4c6b-b20d-5faa3b7875ba"
+            },
+            "Signature": {
+              "S": "C5OwtRw0HA7FF3b0rcGsb0hTbX6985Wffl1kM9FwUdF9AXAOpNHc+jMikVI0TkbZj28HWvJREEuWCjaXbeFalJh1T5urlEWwo7Rmtdb+sXtVQdNm8R0I3Wak4SuugJiohTVpaF13OPNRNmP90sUO9N2sm7zm6DtAdofr4ku9lJDWKqUMATCTWRr3eMEkp560R9ys39JXkNcNdrRqJznCQfFtLft9zFyBc0pstaHB7d58Jq+rfVdJeiyotpNK4DO1zK3zmwlEekfleJv+x1OdmB84X/Cqx+HDNZx4DKF1XIfTvknyzj4c08kgeZPHUtio/URGPYui1VCfpvW+F59yNw=="
+            },
+            "Timestamp": {
+              "S": "2019-11-30T04:17:24.166Z"
+            },
+            "SigningCertURL": {
+              "S": "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem"
+            },
+            "MessageId": {
+              "S": "d20d9983-bc58-5227-8ea9-cfd853cca5d5"
+            }
+          }
+        },
+        "sent_ts": {
+          "S": "1575087444213"
+        },
+        "status": {
+          "S": "new"
+        }
+      },
+      "SequenceNumber": "211300000000006978280845",
+      "SizeBytes": 935,
+      "StreamViewType": "NEW_IMAGE"
+    },
+    "eventSourceARN": "arn:aws:dynamodb:us-west-2:903779448426:table/CdkStack-TableCD117FA1-1DN6TX5QZM2P5/stream/2019-11-30T04:03:29.293"
+  }]
+}
