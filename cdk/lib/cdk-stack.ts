@@ -28,16 +28,21 @@ export class CdkStack extends cdk.Stack {
     const topic = this.node.tryGetContext('SNS_TOPIC_ARN') ? 
       sns.Topic.fromTopicArn(this, 'Topic', this.node.tryGetContext('SNS_TOPIC_ARN')) : new sns.Topic(this, 'Topic')
 
+
+
     // new sns.Subscription(this, 'EmailMe', {
     //   protocol: sns.SubscriptionProtocol.EMAIL,
     //   endpoint: 'pahudnet@gmail.com',
     //   topic
     // });
 
+
     new CfnOutput(this, 'TopicArn', { value: topic.topicArn })
     const queue = new sqs.Queue(this, 'Queue')
+
     new cdk.CfnOutput(this, 'QueueName', { value: queue.queueName })
     topic.addSubscription(new subscription.SqsSubscription(queue))
+
 
     // const topic = new sns.Topic(this, 'Topic')
     // new sns.Subscription(this, 'EmailMe', {
@@ -130,6 +135,7 @@ export class CdkStack extends cdk.Stack {
       value: `curl -XPOST -H 'content-type: application/json' ${book.url}`
     })
 
+
     topic.grantPublish(integApig2Snsrole)
 
     // DynamoDB Table
@@ -176,7 +182,7 @@ export class CdkStack extends cdk.Stack {
     // allow ANY method on /query
     query.addProxy({
       defaultIntegration: new LambdaIntegration(fnQueryBooking),
-      anyMethod: true
+      anyMethod: true 
     })
     new cdk.CfnOutput(this, 'QueryAPIEndpoint', { value: `${query.url}/{message_id}` })
 
@@ -189,6 +195,5 @@ export class CdkStack extends cdk.Stack {
     table.grantReadWriteData(fnFullfillment)
     table.grantReadData(fnQueueProcessor)
     table.grantReadWriteData(fnQueryBooking)
-    
   }
 }
