@@ -14,7 +14,9 @@ After your AWS CDK environment is ready, you can directly deploy this stack or b
 # checkout this repo
 $ git clone https://github.com/pahud/svs327-reinvent2019.git
 $ cd svs327-reinvent2019
+$ npm install
 $ cd cdk
+$ npm install
 # bootstrap your cdk environment
 $ cdk bootstrap
 # build with tsc to compile typescript into javascript

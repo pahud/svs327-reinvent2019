@@ -3,13 +3,13 @@
 Congratulations you have completed the labs. We have learned how to build a serverless booking API with AWS CDK by design from scratch. We craft it by creating an abstract diagram and implement it mostly in our favorite IDE such as VSCode. With this approach, we just need to understand the essentials of each AWS services we use and then we shall be able to put them together with AWS CDK even without opening the AWS console for individual services.  We focus on the higher design patterns rather than how to provision the infrastructure or how to create correct IAM policies or security groups.  Actually, we are building our services with **Architecture of the Code**, which we believe is the next phase of Infrastructure of Code for modern applications especially for serverless and container-based applications.
 
 
-Recommended reading: [Containers and infrastructure as code, like peanut butter and jelly](https://aws.amazon.com/blogs/containers/containers-and-infrastructure-as-code-like-peanut-butter-and-jelly/) by ***Clare Liguori*** posted on 18 OCT 2019.
+further reading: [Containers and infrastructure as code, like peanut butter and jelly](https://aws.amazon.com/blogs/containers/containers-and-infrastructure-as-code-like-peanut-butter-and-jelly/) by ***Clare Liguori*** posted on 18 OCT 2019.
 
 
 
 # Going to Production
 
-This repostory demonstrates how to build a simple serverless booking API in AWS. To move it forward, we still have to put some concepts into consideration
+This repostory demonstrates how to build a simple serverless booking API in AWS. To move it forward, we still have to put some thoughts into consideration
 
 
 
@@ -34,4 +34,4 @@ Consider [DynamoDB Global Table](https://docs.aws.amazon.com/amazondynamodb/late
 
 Appreciate your participation in this builder session. We are still working on this content to make it better so any github issue or PR is highly welcome and appreciated.
 
-Enjoy your serverless building on AWS !
+Enjoy your Serverless Building on AWS !
