@@ -1,0 +1,1146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+Object {
+  "Outputs": Object {
+    "BookCommand": Object {
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "curl -XPOST -H 'content-type: application/json' https://",
+            Object {
+              "Ref": "myapi4C7BF186",
+            },
+            ".execute-api.",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            Object {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            Object {
+              "Ref": "myapiDeploymentStageprod298F01AF",
+            },
+            "/book",
+          ],
+        ],
+      },
+    },
+    "BookingAPIEndpoint": Object {
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "https://",
+            Object {
+              "Ref": "myapi4C7BF186",
+            },
+            ".execute-api.",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            Object {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            Object {
+              "Ref": "myapiDeploymentStageprod298F01AF",
+            },
+            "/book",
+          ],
+        ],
+      },
+    },
+    "QueryAPIEndpoint": Object {
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "https://",
+            Object {
+              "Ref": "myapi4C7BF186",
+            },
+            ".execute-api.",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            Object {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            Object {
+              "Ref": "myapiDeploymentStageprod298F01AF",
+            },
+            "/query/{message_id}",
+          ],
+        ],
+      },
+    },
+    "QueueName": Object {
+      "Value": Object {
+        "Fn::GetAtt": Array [
+          "Queue4A7E3555",
+          "QueueName",
+        ],
+      },
+    },
+    "TableName": Object {
+      "Value": Object {
+        "Ref": "TableCD117FA1",
+      },
+    },
+    "TopicArn": Object {
+      "Value": Object {
+        "Ref": "TopicBFC7AF6E",
+      },
+    },
+    "myapiEndpoint3628AFE3": Object {
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "https://",
+            Object {
+              "Ref": "myapi4C7BF186",
+            },
+            ".execute-api.",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            Object {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            Object {
+              "Ref": "myapiDeploymentStageprod298F01AF",
+            },
+            "/",
+          ],
+        ],
+      },
+    },
+  },
+  "Parameters": Object {
+    "AssetParameters8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11ArtifactHash2C66E6F4": Object {
+      "Description": "Artifact hash for asset \\"8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11\\"",
+      "Type": "String",
+    },
+    "AssetParameters8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11S3Bucket8D0B86FF": Object {
+      "Description": "S3 bucket for asset \\"8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11\\"",
+      "Type": "String",
+    },
+    "AssetParameters8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11S3VersionKeyF43BBB5D": Object {
+      "Description": "S3 key for asset version \\"8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11\\"",
+      "Type": "String",
+    },
+    "AssetParameterse1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597ArtifactHash3CA95CB2": Object {
+      "Description": "Artifact hash for asset \\"e1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597\\"",
+      "Type": "String",
+    },
+    "AssetParameterse1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597S3Bucket215306D9": Object {
+      "Description": "S3 bucket for asset \\"e1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597\\"",
+      "Type": "String",
+    },
+    "AssetParameterse1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597S3VersionKey3E59716F": Object {
+      "Description": "S3 key for asset version \\"e1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597\\"",
+      "Type": "String",
+    },
+    "AssetParameterse66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15ArtifactHashEBE60F68": Object {
+      "Description": "Artifact hash for asset \\"e66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15\\"",
+      "Type": "String",
+    },
+    "AssetParameterse66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15S3BucketA6690661": Object {
+      "Description": "S3 bucket for asset \\"e66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15\\"",
+      "Type": "String",
+    },
+    "AssetParameterse66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15S3VersionKeyEF693589": Object {
+      "Description": "S3 key for asset version \\"e66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15\\"",
+      "Type": "String",
+    },
+  },
+  "Resources": Object {
+    "IntegApig2SnsRole2162DB27": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "IntegApig2SnsRoleDefaultPolicy48F714C2": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sns:Publish",
+              "Effect": "Allow",
+              "Resource": Object {
+                "Ref": "TopicBFC7AF6E",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "IntegApig2SnsRoleDefaultPolicy48F714C2",
+        "Roles": Array [
+          Object {
+            "Ref": "IntegApig2SnsRole2162DB27",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "Queue4A7E3555": Object {
+      "Type": "AWS::SQS::Queue",
+    },
+    "QueuePolicy25439813": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sqs:SendMessage",
+              "Condition": Object {
+                "ArnEquals": Object {
+                  "aws:SourceArn": Object {
+                    "Ref": "TopicBFC7AF6E",
+                  },
+                },
+              },
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "sns.amazonaws.com",
+              },
+              "Resource": Object {
+                "Fn::GetAtt": Array [
+                  "Queue4A7E3555",
+                  "Arn",
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "Queues": Array [
+          Object {
+            "Ref": "Queue4A7E3555",
+          },
+        ],
+      },
+      "Type": "AWS::SQS::QueuePolicy",
+    },
+    "QueuetestTopicFC445456FBC8A1D3": Object {
+      "Properties": Object {
+        "Endpoint": Object {
+          "Fn::GetAtt": Array [
+            "Queue4A7E3555",
+            "Arn",
+          ],
+        },
+        "Protocol": "sqs",
+        "TopicArn": Object {
+          "Ref": "TopicBFC7AF6E",
+        },
+      },
+      "Type": "AWS::SNS::Subscription",
+    },
+    "TableCD117FA1": Object {
+      "DeletionPolicy": "Delete",
+      "Properties": Object {
+        "AttributeDefinitions": Array [
+          Object {
+            "AttributeName": "message_id",
+            "AttributeType": "S",
+          },
+        ],
+        "KeySchema": Array [
+          Object {
+            "AttributeName": "message_id",
+            "KeyType": "HASH",
+          },
+        ],
+        "ProvisionedThroughput": Object {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5,
+        },
+        "StreamSpecification": Object {
+          "StreamViewType": "NEW_IMAGE",
+        },
+      },
+      "Type": "AWS::DynamoDB::Table",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "TopicBFC7AF6E": Object {
+      "Type": "AWS::SNS::Topic",
+    },
+    "fnFullfillmentA5D93376": Object {
+      "DependsOn": Array [
+        "fnFullfillmentServiceRoleDefaultPolicy8F0894E8",
+        "fnFullfillmentServiceRoleC7AB5E72",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameterse1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597S3Bucket215306D9",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameterse1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597S3VersionKey3E59716F",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameterse1f6ad5284c89fbf26d085bb6747d17f1ef552530cb6bf182d892c31f4508597S3VersionKey3E59716F",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "TABLE_NAME": Object {
+              "Ref": "TableCD117FA1",
+            },
+          },
+        },
+        "Handler": "app.lambda_handler",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "fnFullfillmentServiceRoleC7AB5E72",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.7",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "fnFullfillmentDynamoDBEventSourcetestTable1B95715781218384": Object {
+      "Properties": Object {
+        "BatchSize": 100,
+        "EventSourceArn": Object {
+          "Fn::GetAtt": Array [
+            "TableCD117FA1",
+            "StreamArn",
+          ],
+        },
+        "FunctionName": Object {
+          "Ref": "fnFullfillmentA5D93376",
+        },
+        "StartingPosition": "LATEST",
+      },
+      "Type": "AWS::Lambda::EventSourceMapping",
+    },
+    "fnFullfillmentServiceRoleC7AB5E72": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "fnFullfillmentServiceRoleDefaultPolicy8F0894E8": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "dynamodb:ListStreams",
+              "Effect": "Allow",
+              "Resource": Object {
+                "Fn::Join": Array [
+                  "",
+                  Array [
+                    Object {
+                      "Fn::GetAtt": Array [
+                        "TableCD117FA1",
+                        "Arn",
+                      ],
+                    },
+                    "/stream/*",
+                  ],
+                ],
+              },
+            },
+            Object {
+              "Action": Array [
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+              ],
+              "Effect": "Allow",
+              "Resource": Object {
+                "Fn::GetAtt": Array [
+                  "TableCD117FA1",
+                  "StreamArn",
+                ],
+              },
+            },
+            Object {
+              "Action": Array [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "TableCD117FA1",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "fnFullfillmentServiceRoleDefaultPolicy8F0894E8",
+        "Roles": Array [
+          Object {
+            "Ref": "fnFullfillmentServiceRoleC7AB5E72",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "fnQueryBooking97A8A2D9": Object {
+      "DependsOn": Array [
+        "fnQueryBookingServiceRoleDefaultPolicyE9711E46",
+        "fnQueryBookingServiceRole25B6DAF1",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameters8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11S3Bucket8D0B86FF",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11S3VersionKeyF43BBB5D",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameters8dacb419c3044fb003ae57f04adb5e723395379f1395c77ea2720f4797629b11S3VersionKeyF43BBB5D",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "TABLE_NAME": Object {
+              "Ref": "TableCD117FA1",
+            },
+          },
+        },
+        "Handler": "app.lambda_handler",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "fnQueryBookingServiceRole25B6DAF1",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.7",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "fnQueryBookingServiceRole25B6DAF1": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "fnQueryBookingServiceRoleDefaultPolicyE9711E46": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "TableCD117FA1",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "fnQueryBookingServiceRoleDefaultPolicyE9711E46",
+        "Roles": Array [
+          Object {
+            "Ref": "fnQueryBookingServiceRole25B6DAF1",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "fnQueueProcessor384528BB": Object {
+      "DependsOn": Array [
+        "fnQueueProcessorServiceRoleDefaultPolicyE974DADA",
+        "fnQueueProcessorServiceRole9FBA7E23",
+      ],
+      "Properties": Object {
+        "Code": Object {
+          "S3Bucket": Object {
+            "Ref": "AssetParameterse66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15S3BucketA6690661",
+          },
+          "S3Key": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                Object {
+                  "Fn::Select": Array [
+                    0,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameterse66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15S3VersionKeyEF693589",
+                        },
+                      ],
+                    },
+                  ],
+                },
+                Object {
+                  "Fn::Select": Array [
+                    1,
+                    Object {
+                      "Fn::Split": Array [
+                        "||",
+                        Object {
+                          "Ref": "AssetParameterse66d717345f8eec38dce1de56390cffd67bad4bd1a09a3057b2d622b415e5e15S3VersionKeyEF693589",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            ],
+          },
+        },
+        "Environment": Object {
+          "Variables": Object {
+            "TABLE_NAME": Object {
+              "Ref": "TableCD117FA1",
+            },
+          },
+        },
+        "Handler": "app.lambda_handler",
+        "Role": Object {
+          "Fn::GetAtt": Array [
+            "fnQueueProcessorServiceRole9FBA7E23",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.7",
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "fnQueueProcessorServiceRole9FBA7E23": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "fnQueueProcessorServiceRoleDefaultPolicyE974DADA": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "sqs:ReceiveMessage",
+                "sqs:ChangeMessageVisibility",
+                "sqs:GetQueueUrl",
+                "sqs:DeleteMessage",
+                "sqs:GetQueueAttributes",
+              ],
+              "Effect": "Allow",
+              "Resource": Object {
+                "Fn::GetAtt": Array [
+                  "Queue4A7E3555",
+                  "Arn",
+                ],
+              },
+            },
+            Object {
+              "Action": Array [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "TableCD117FA1",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+            Object {
+              "Action": Array [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                Object {
+                  "Fn::GetAtt": Array [
+                    "TableCD117FA1",
+                    "Arn",
+                  ],
+                },
+                Object {
+                  "Ref": "AWS::NoValue",
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "fnQueueProcessorServiceRoleDefaultPolicyE974DADA",
+        "Roles": Array [
+          Object {
+            "Ref": "fnQueueProcessorServiceRole9FBA7E23",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "fnQueueProcessorSqsEventSourcetestQueue6AD77D9D48B5348E": Object {
+      "Properties": Object {
+        "EventSourceArn": Object {
+          "Fn::GetAtt": Array [
+            "Queue4A7E3555",
+            "Arn",
+          ],
+        },
+        "FunctionName": Object {
+          "Ref": "fnQueueProcessor384528BB",
+        },
+      },
+      "Type": "AWS::Lambda::EventSourceMapping",
+    },
+    "myapi4C7BF186": Object {
+      "Properties": Object {
+        "Name": "my-api",
+      },
+      "Type": "AWS::ApiGateway::RestApi",
+    },
+    "myapiAccountEC421A0A": Object {
+      "DependsOn": Array [
+        "myapi4C7BF186",
+      ],
+      "Properties": Object {
+        "CloudWatchRoleArn": Object {
+          "Fn::GetAtt": Array [
+            "myapiCloudWatchRole095452E5",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::ApiGateway::Account",
+    },
+    "myapiCloudWatchRole095452E5": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "myapiDeployment92F2CB49bf4c270253c61593ccca45fb774fb2b4": Object {
+      "DependsOn": Array [
+        "myapibookPOST45FB1928",
+        "myapibookF2A92464",
+        "myapiqueryproxyANY704F7A84",
+        "myapiqueryproxy30D448FC",
+        "myapiqueryE5D40654",
+      ],
+      "Properties": Object {
+        "Description": "Automatically created by the RestApi construct",
+        "RestApiId": Object {
+          "Ref": "myapi4C7BF186",
+        },
+      },
+      "Type": "AWS::ApiGateway::Deployment",
+    },
+    "myapiDeploymentStageprod298F01AF": Object {
+      "Properties": Object {
+        "DeploymentId": Object {
+          "Ref": "myapiDeployment92F2CB49bf4c270253c61593ccca45fb774fb2b4",
+        },
+        "RestApiId": Object {
+          "Ref": "myapi4C7BF186",
+        },
+        "StageName": "prod",
+      },
+      "Type": "AWS::ApiGateway::Stage",
+    },
+    "myapibookF2A92464": Object {
+      "Properties": Object {
+        "ParentId": Object {
+          "Fn::GetAtt": Array [
+            "myapi4C7BF186",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "book",
+        "RestApiId": Object {
+          "Ref": "myapi4C7BF186",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "myapibookPOST45FB1928": Object {
+      "Properties": Object {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "POST",
+        "Integration": Object {
+          "Credentials": Object {
+            "Fn::GetAtt": Array [
+              "IntegApig2SnsRole2162DB27",
+              "Arn",
+            ],
+          },
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": Array [
+            Object {
+              "ResponseTemplates": Object {
+                "application/json": "$input.json(\\"$\\")",
+              },
+              "StatusCode": "200",
+            },
+            Object {
+              "ResponseTemplates": Object {
+                "application/json": "{\\"success\\":false,\\"message\\":\\"Invalid Request\\"}",
+              },
+              "SelectionPattern": "Invalid",
+              "StatusCode": "503",
+            },
+          ],
+          "PassthroughBehavior": "NEVER",
+          "RequestParameters": Object {
+            "integration.request.header.Content-Type": "'application/x-www-form-urlencoded'",
+          },
+          "RequestTemplates": Object {
+            "application/json": Object {
+              "Fn::Join": Array [
+                "",
+                Array [
+                  "Action=Publish&TopicArn=$util.urlEncode('",
+                  Object {
+                    "Ref": "TopicBFC7AF6E",
+                  },
+                  "')&Message=$util.urlEncode($input.body)",
+                ],
+              ],
+            },
+          },
+          "Type": "AWS",
+          "Uri": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                ":sns:path//publish",
+              ],
+            ],
+          },
+        },
+        "MethodResponses": Array [
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "200",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "400",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "401",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "403",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "404",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "422",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "500",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "502",
+          },
+          Object {
+            "ResponseModels": Object {},
+            "StatusCode": "504",
+          },
+        ],
+        "ResourceId": Object {
+          "Ref": "myapibookF2A92464",
+        },
+        "RestApiId": Object {
+          "Ref": "myapi4C7BF186",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "myapiqueryE5D40654": Object {
+      "Properties": Object {
+        "ParentId": Object {
+          "Fn::GetAtt": Array [
+            "myapi4C7BF186",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "query",
+        "RestApiId": Object {
+          "Ref": "myapi4C7BF186",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "myapiqueryproxy30D448FC": Object {
+      "Properties": Object {
+        "ParentId": Object {
+          "Ref": "myapiqueryE5D40654",
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": Object {
+          "Ref": "myapi4C7BF186",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "myapiqueryproxyANY704F7A84": Object {
+      "Properties": Object {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "ANY",
+        "Integration": Object {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                Object {
+                  "Fn::GetAtt": Array [
+                    "fnQueryBooking97A8A2D9",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "ResourceId": Object {
+          "Ref": "myapiqueryproxy30D448FC",
+        },
+        "RestApiId": Object {
+          "Ref": "myapi4C7BF186",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "myapiqueryproxyANYApiPermissionTesttestmyapi9A7A3784ANYqueryproxyA9C2F4B3": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "fnQueryBooking97A8A2D9",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "myapi4C7BF186",
+              },
+              "/test-invoke-stage/*/query/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "myapiqueryproxyANYApiPermissiontestmyapi9A7A3784ANYqueryproxy6343EFE0": Object {
+      "Properties": Object {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": Object {
+          "Fn::GetAtt": Array [
+            "fnQueryBooking97A8A2D9",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              Object {
+                "Ref": "myapi4C7BF186",
+              },
+              "/",
+              Object {
+                "Ref": "myapiDeploymentStageprod298F01AF",
+              },
+              "/*/query/*",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+  },
+}
+`;
