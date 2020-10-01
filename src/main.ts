@@ -1,15 +1,13 @@
-import * as cdk from '@aws-cdk/core';
+import * as path from 'path';
 import * as apigateway from '@aws-cdk/aws-apigateway';
+import * as ddb from '@aws-cdk/aws-dynamodb';
+import * as iam from '@aws-cdk/aws-iam';
 import * as lambda from '@aws-cdk/aws-lambda';
+import { SqsEventSource, DynamoEventSource } from '@aws-cdk/aws-lambda-event-sources';
 import * as sns from '@aws-cdk/aws-sns';
 import * as subscription from '@aws-cdk/aws-sns-subscriptions';
 import * as sqs from '@aws-cdk/aws-sqs';
-import * as iam from '@aws-cdk/aws-iam';
-import { CfnOutput } from '@aws-cdk/core';
-import * as ddb from '@aws-cdk/aws-dynamodb';
-import path = require('path');
-import { SqsEventSource, DynamoEventSource } from '@aws-cdk/aws-lambda-event-sources';
-import { LambdaIntegration } from '@aws-cdk/aws-apigateway';
+import * as cdk from '@aws-cdk/core';
 
 export class MyStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -25,13 +23,13 @@ export class MyStack extends cdk.Stack {
     });
 
     const topic = this.node.tryGetContext('SNS_TOPIC_ARN') ?
-      sns.Topic.fromTopicArn(this, 'Topic', this.node.tryGetContext('SNS_TOPIC_ARN')) : new sns.Topic(this, 'Topic')
+      sns.Topic.fromTopicArn(this, 'Topic', this.node.tryGetContext('SNS_TOPIC_ARN')) : new sns.Topic(this, 'Topic');
 
-    new CfnOutput(this, 'TopicArn', { value: topic.topicArn })
-    const queue = new sqs.Queue(this, 'Queue')
+    new cdk.CfnOutput(this, 'TopicArn', { value: topic.topicArn });
+    const queue = new sqs.Queue(this, 'Queue');
 
-    new cdk.CfnOutput(this, 'QueueName', { value: queue.queueName })
-    topic.addSubscription(new subscription.SqsSubscription(queue))
+    new cdk.CfnOutput(this, 'QueueName', { value: queue.queueName });
+    topic.addSubscription(new subscription.SqsSubscription(queue));
 
 
     const integApig2Sns = new apigateway.AwsIntegration({
@@ -43,7 +41,7 @@ export class MyStack extends cdk.Stack {
       options: {
         credentialsRole: integApig2Snsrole,
         requestParameters: {
-          'integration.request.header.Content-Type': '\'application/x-www-form-urlencoded\''
+          'integration.request.header.Content-Type': '\'application/x-www-form-urlencoded\'',
         },
         requestTemplates: {
           'application/json': `Action=Publish&TopicArn=$util.urlEncode('${topic.topicArn}')&Message=$util.urlEncode($input.body)`,
@@ -61,22 +59,22 @@ export class MyStack extends cdk.Stack {
             responseTemplates: { 'application/json': JSON.stringify({ success: false, message: 'Invalid Request' }) },
           },
         ],
-      }
+      },
     });
 
 
     // create integration response programmatically:
-    var statuses: { [index: string]: string; } = {
-      "200": "",
-      "400": "[\s\S]*\[400\][\s\S]*",
-      "401": "[\s\S]*\[401\][\s\S]*",
-      "403": "[\s\S]*\[403\][\s\S]*",
-      "404": "[\s\S]*\[404\][\s\S]*",
-      "422": "[\s\S]*\[422\][\s\S]*",
-      "500": "[\s\S]*(Process\s?exited\s?before\s?completing\s?request|\[500\])[\s\S]*",
-      "502": "[\s\S]*\[502\][\s\S]*",
-      "504": "([\s\S]*\[504\][\s\S]*)|(^[Task timed out].*)"
-    }
+    var statuses: { [index: string]: string } = {
+      200: '',
+      400: '[\s\S]*\[400\][\s\S]*',
+      401: '[\s\S]*\[401\][\s\S]*',
+      403: '[\s\S]*\[403\][\s\S]*',
+      404: '[\s\S]*\[404\][\s\S]*',
+      422: '[\s\S]*\[422\][\s\S]*',
+      500: '[\s\S]*(Process\s?exited\s?before\s?completing\s?request|\[500\])[\s\S]*',
+      502: '[\s\S]*\[502\][\s\S]*',
+      504: '([\s\S]*\[504\][\s\S]*)|(^[Task timed out].*)',
+    };
 
     // // create integration response
     // var integrationResponses: apigateway.IntegrationResponse[] = [];
@@ -101,36 +99,35 @@ export class MyStack extends cdk.Stack {
         // responseParameters: {
         //   "method.response.header.Access-Control-Allow-Origin": true
         // },
-        responseModels: {}
-      })
+        responseModels: {},
+      });
     }
 
     book.addMethod('POST', integApig2Sns, {
-      methodResponses
+      methodResponses,
     });
 
 
-
-    new cdk.CfnOutput(this, 'BookingAPIEndpoint', { value: `${book.url}` })
+    new cdk.CfnOutput(this, 'BookingAPIEndpoint', { value: `${book.url}` });
     new cdk.CfnOutput(this, 'BookCommand', {
-      value: `curl -XPOST -H 'content-type: application/json' ${book.url}`
-    })
+      value: `curl -XPOST -H 'content-type: application/json' ${book.url}`,
+    });
 
 
-    topic.grantPublish(integApig2Snsrole)
+    topic.grantPublish(integApig2Snsrole);
 
     // DynamoDB Table
     const table = new ddb.Table(this, 'Table', {
       partitionKey: {
         name: 'message_id',
-        type: ddb.AttributeType.STRING
+        type: ddb.AttributeType.STRING,
       },
       stream: ddb.StreamViewType.NEW_IMAGE,
-      removalPolicy: cdk.RemovalPolicy.DESTROY
-    })
-    new cdk.CfnOutput(this, 'TableName', { value: table.tableName })
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+    });
+    new cdk.CfnOutput(this, 'TableName', { value: table.tableName });
 
-    table.tableArn
+    table.tableArn;
 
 
     // QueueProcessor
@@ -139,8 +136,8 @@ export class MyStack extends cdk.Stack {
       code: lambda.AssetCode.fromAsset(path.join(__dirname, '../', 'functions/QueueProcessor/fn/')),
       handler: 'app.lambda_handler',
       environment: {
-        TABLE_NAME: table.tableName
-      }
+        TABLE_NAME: table.tableName,
+      },
     });
 
     // FullfillmentHandler
@@ -149,8 +146,8 @@ export class MyStack extends cdk.Stack {
       code: lambda.AssetCode.fromAsset(path.join(__dirname, '../', 'functions/FullfillmentHandler/fn/')),
       handler: 'app.lambda_handler',
       environment: {
-        TABLE_NAME: table.tableName
-      }
+        TABLE_NAME: table.tableName,
+      },
     });
 
     // QueryBookingHandler
@@ -159,26 +156,26 @@ export class MyStack extends cdk.Stack {
       code: lambda.AssetCode.fromAsset(path.join(__dirname, '../', 'functions/QueryBookingStatus/fn/')),
       handler: 'app.lambda_handler',
       environment: {
-        TABLE_NAME: table.tableName
-      }
+        TABLE_NAME: table.tableName,
+      },
     });
 
     // allow ANY method on /query
     query.addProxy({
-      defaultIntegration: new LambdaIntegration(fnQueryBooking),
-      anyMethod: true
-    })
-    new cdk.CfnOutput(this, 'QueryAPIEndpoint', { value: `${query.url}/{message_id}` })
+      defaultIntegration: new apigateway.LambdaIntegration(fnQueryBooking),
+      anyMethod: true,
+    });
+    new cdk.CfnOutput(this, 'QueryAPIEndpoint', { value: `${query.url}/{message_id}` });
 
-    fnQueueProcessor.addEventSource(new SqsEventSource(queue))
-    table.grantReadWriteData(fnQueueProcessor)
+    fnQueueProcessor.addEventSource(new SqsEventSource(queue));
+    table.grantReadWriteData(fnQueueProcessor);
     fnFullfillment.addEventSource(new DynamoEventSource(table, {
-      startingPosition: lambda.StartingPosition.LATEST
-    }))
-    table.grantStreamRead(fnFullfillment)
-    table.grantReadWriteData(fnFullfillment)
-    table.grantReadData(fnQueueProcessor)
-    table.grantReadWriteData(fnQueryBooking)
+      startingPosition: lambda.StartingPosition.LATEST,
+    }));
+    table.grantStreamRead(fnFullfillment);
+    table.grantReadWriteData(fnFullfillment);
+    table.grantReadData(fnQueueProcessor);
+    table.grantReadWriteData(fnQueryBooking);
   }
 }
 
