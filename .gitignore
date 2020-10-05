@@ -52,6 +52,7 @@ yarn-error.log
 !/.github/workflows/build.yml
 !/.mergify.yml
 !/.github/dependabot.yml
+!/.github/workflows/projenupgrade.yml
 !/tsconfig.json
 !/src
 !/tsconfig.jest.json

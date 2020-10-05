@@ -9,6 +9,7 @@ const project = new AwsCdkTypeScriptApp({
   authorName: "Pahud Hsieh",
   authorEmail: "pahudnet@gmail.com",
   repository: "https://github.com/pahud/svs327-reinvent2019.git",
+  projenUpgradeSecret: 'AUTOMATION_GITHUB_TOKEN',
   cdkDependencies: [
     "@aws-cdk/aws-apigateway",
     "@aws-cdk/aws-dynamodb",
