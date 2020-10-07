@@ -38,6 +38,9 @@ jspm_packages/
 /lib
 /dist
 /coverage
+cdk.out/
+.cdk.staging/
+.parcel-cache/
 cdk.out
 cdk.context.json
 docker-compose.yml
