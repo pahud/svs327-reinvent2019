@@ -13,6 +13,8 @@ dist
 /coverage
 /test
 /.eslintrc.json
+cdk.out/
+.cdk.staging/
 cdk.out
 cdk.context.json
 docker-compose.yml
