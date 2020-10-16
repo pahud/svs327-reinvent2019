@@ -188,5 +188,5 @@ const devEnv = {
 const app = new cdk.App();
 new MyStack(app, 'my-stack-dev', { env: devEnv });
 
-app.synth();
+// app.synth();
 
