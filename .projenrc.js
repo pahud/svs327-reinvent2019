@@ -11,7 +11,6 @@ const project = new AwsCdkTypeScriptApp({
   authorName: "Pahud Hsieh",
   authorEmail: "pahudnet@gmail.com",
   repository: "https://github.com/pahud/svs327-reinvent2019.git",
-  projenUpgradeSecret: 'AUTOMATION_GITHUB_TOKEN',
   dependabot: false,
   cdkDependencies: [
     "@aws-cdk/aws-apigateway",
