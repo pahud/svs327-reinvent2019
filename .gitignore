@@ -54,7 +54,6 @@ yarn-error.log
 !/.versionrc.json
 !/.github/workflows/build.yml
 !/.mergify.yml
-!/.github/dependabot.yml
 !/.github/workflows/projenupgrade.yml
 !/tsconfig.json
 !/src
@@ -62,3 +61,4 @@ yarn-error.log
 !/test
 !/.eslintrc.json
 !/cdk.json
+!/.github/workflows/projenyarnupgrade.yml
