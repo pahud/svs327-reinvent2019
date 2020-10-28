@@ -54,6 +54,7 @@ yarn-error.log
 !/.versionrc.json
 !/.github/workflows/build.yml
 !/.mergify.yml
+!/.github/pull_request_template.md
 !/tsconfig.json
 !/src
 !/tsconfig.jest.json
