@@ -22,7 +22,8 @@
     "cdk": "cdk",
     "synth": "cdk synth",
     "deploy": "cdk deploy",
-    "diff": "cdk diff"
+    "diff": "cdk diff",
+    "destroy": "cdk destroy"
   },
   "author": {
     "name": "Pahud Hsieh",
@@ -41,7 +42,7 @@
     "eslint-plugin-import": "^2.22.1",
     "jest": "^26.4.2",
     "json-schema": "^0.2.5",
-    "projen": "^0.3.135",
+    "projen": "^0.3.137",
     "standard-version": "^9.0.0",
     "ts-jest": "^26.1.0",
     "ts-node": "^9.0.0",
@@ -126,6 +127,11 @@
     "deploy": {
       "desc": "Deploys your cdk app to the AWS cloud",
       "command": "yarn run deploy",
+      "category": 2
+    },
+    "destroy": {
+      "desc": "Destroys your cdk app in the AWS cloud",
+      "command": "yarn run destroy",
       "category": 2
     }
   },
